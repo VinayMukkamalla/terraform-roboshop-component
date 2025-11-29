@@ -71,8 +71,8 @@ resource "aws_lb_target_group" "main" {
     path = local.health_check_path
     port = local.tg_port
     protocol = "HTTP"
-    timeout = 2
-    unhealthy_threshold = 2
+    timeout = 10
+    unhealthy_threshold = 5
   }
 }
 
